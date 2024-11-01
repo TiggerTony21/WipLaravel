@@ -1,0 +1,186 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Fondo oscuro */
+    color: #fff;
+}
+
+/* Header con barra de navegación centrado */
+header {
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px 0; /* Reducir el padding inferior del header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0; /* Asegurar que no haya margen adicional */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    width: 80%; /* Mantiene un ancho máximo para centrar el contenido */
+}
+
+.logo img {
+    width: 100px; /* Tamaño proporcional del logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li a {
+    color: #000; /* Texto negro */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem; /* Ajuste del tamaño del texto */
+}
+
+.nav-links li a:hover {
+    color: #3498db; /* Color azul al pasar el mouse */
+}
+
+/* Sección Home con imagen de fondo */
+.home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    background-image: url('/uap.jpg'); /* Ruta relativa a la carpeta public */
+    
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 120px); /* Ajuste de la altura mínima para tener en cuenta el footer */
+}
+
+.home-section h1 {
+    font-size: 2.5rem;
+    margin-top: -150px; /* Reducir el margen superior del h1 */
+    margin-bottom: 10px; /* Opcional: ajustar también el margen inferior */
+    color: #DAA520; /* Color dorado más mate */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra ligera y sutil */
+
+
+}
+
+.home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de formulario y QR */
+.form-qr-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Asegura que el grupo de formularios ocupe el ancho completo */
+    background-color: rgba(46, 204, 113, 0.6); /* Verde más translúcido */
+    padding: 0px;
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+button {
+    padding: 10px;
+    margin-top: 0px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: rgba(39, 174, 96, 0.6); /* Verde más translúcido */
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e8449;
+}
+
+/* Estilos para el QR y resumen */
+.qr-summary {
+    text-align: center;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.qr-summary p {
+    font-weight: bold;
+}
+
+
+.qr-container {
+    margin: 20px 0;
+    padding: 10px; /* Espacio alrededor del QR */
+    background-color: rgba(46, 204, 113, 0.6); /* Verde más translúcido */
+    border-radius: 10px;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Asegura que el texto dentro del contenedor esté centrado */
+    word-wrap: break-word; /* Permite que las líneas largas se ajusten automáticamente */
+    white-space: pre-wrap; /* Mantiene los saltos de línea, si existen */
+
+}
+
+footer {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    text-align: center;
+    padding: 20px;
+    margin-top: -80px; /* Mueve el footer hacia arriba */
+    position: relative; /* Asegura que esté colocado en relación con otros elementos */
+
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-qr-container {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .form-group {
+        flex-direction: row; /* Coloca los elementos en fila en pantallas grandes */
+        justify-content: space-between; /* Distribuye el contenido del formulario */
+        align-items: center; /* Alinea los elementos verticalmente en el centro */
+        gap: 20px; /* Espacio entre los elementos del grupo */
+    }
+
+    .form-group label {
+        width: 40%; /* El label ocupará el 30% del espacio */
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 60%; /* Los campos de entrada ocuparán el 70% */
+    }
+}
